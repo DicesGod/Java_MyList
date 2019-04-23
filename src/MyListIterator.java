@@ -46,7 +46,6 @@ public class MyListIterator <T> implements Iterator<T>{
 	}
 	
 	public void goToBegin() {
-		//if(cur==null) {throw new MLInvalidAccessException(1);}
 		cur=null;
 		itnext=list;
 	}

@@ -6,31 +6,31 @@ public class Main {
 		
 		//Check MyList
 		
-		Integer [] input = {1,2,3,4};
+		Integer [] MyList = {1,2,3,4};
 		
 		MyList<Integer> emptylist = new MyList<Integer>();
-		MyList<Integer> listsample = new MyList<Integer>(input);
+		MyList<Integer> testlist = new MyList<Integer>(MyList);
 		System.out.println("Check empty list: "+emptylist.isEmpty());
-		System.out.println("Check listsample: "+emptylist.isEmpty());
-		System.out.println("Test list: "+listsample);
-		System.out.println("Array of objects: "+listsample.toArray());
-		System.out.println("Data of first node: "+listsample.head());
-		System.out.println("MyList without first node: "+listsample.tail());
-		System.out.println("Data of last node: "+listsample.end());
+		System.out.println("Check testlist: "+emptylist.isEmpty());
+		System.out.println("Test list: "+testlist);
+		System.out.println("Array of objects: "+testlist.toArray());
+		System.out.println("Data of first node: "+testlist.head());
+		System.out.println("MyList without first node: "+testlist.tail());
+		System.out.println("Data of last node: "+testlist.end());
 		
-		listsample.append(5);
-		System.out.println("Create a node at the end of the MyList: "+listsample.toString());
+		testlist.append(5);
+		System.out.println("Create a node at the end of the MyList: "+testlist.toString());
 		
-		Integer [] input2 = {6,7,8};
+		Integer [] MyList2 = {6,7,8};
 		
-		MyList<Integer> listsample2 = new MyList<Integer>(input2);
-		listsample.concat(listsample2);
-		System.out.println("Concatenated list: "+listsample.toString());
+		MyList<Integer> testlist2 = new MyList<Integer>(MyList2);
+		testlist.concat(testlist2);
+		System.out.println("Concatenated list: "+testlist.toString());
 		
 		//Create iterator
-		Integer [] input3 = {1,2,3};
-		MyList<Integer> listsample3 = new MyList<Integer>(input3);
-		MyListIterator<Integer> itr = listsample3.iterator();
+		Integer [] MyList3 = {1,2,3};
+		MyList<Integer> testlist3 = new MyList<Integer>(MyList3);
+		MyListIterator<Integer> itr = testlist3.iterator();
 		
 		//Check Iterator
 	
@@ -53,17 +53,15 @@ public class Main {
 		itr.goToBegin();
 
 		
-		itr.next(); // Move to A
+		itr.next();
 		
-		//Add iteration (E)
 		itr.add(5);
-		System.out.println("Add iteration E: "+listsample3.toString());
+		System.out.println("Add iteration E: "+testlist3.toString());
 		
 		
-		//Remove iteration (B)
-		itr.next(); // move to B
+		itr.next(); 
 		itr.remove();
-		System.out.println("Remove iteration B: "+listsample3.toString());
+		System.out.println("Remove iteration B: "+testlist3.toString());
 		
 		
 		

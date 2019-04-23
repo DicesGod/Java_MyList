@@ -15,8 +15,7 @@ public class MLInvalidAccessException extends RuntimeException{
 		String massage;
 		switch (code) {
 		case 1 : massage = "Invalid head() call: empty List";
-				break;	
-				
+				break;		
 		case 2 : massage = "Invalid end() call: empty List";
 		break;
 		
